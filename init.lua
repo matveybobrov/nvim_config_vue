@@ -1,3 +1,4 @@
+-- Bind space to <leader>
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -14,3 +15,11 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+	{
+		'nvim-telescope/telescope.nvim', tag = '0.1.5',
+		dependencies = { 'nvim-lua/plenary.nvim' }
+	}
+})
+
