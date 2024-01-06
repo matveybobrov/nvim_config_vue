@@ -17,9 +17,16 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- Telescope for files naviagtion
 	{
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		dependencies = { 'nvim-lua/plenary.nvim' }
+	},
+	-- Color scheme
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
 	}
 })
-
