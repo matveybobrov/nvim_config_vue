@@ -1,3 +1,5 @@
+-- English language of ui
+vim.api.nvim_exec("language en_US", true)
 -- Enable relative line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true

@@ -25,7 +25,7 @@ require("lazy").setup({
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
-		priority = 1000,
+    priority = 1000,
 		opts = {},
 	},
 	-- Treesitter for syntax highlighting and more
