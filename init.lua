@@ -28,5 +28,9 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		opts = {},
+	},
+	-- Treesitter for syntax highlighting and more
+	{
+		'nvim-treesitter/nvim-treesitter' 
 	}
 })
