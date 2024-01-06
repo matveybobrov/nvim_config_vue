@@ -1,7 +1,5 @@
 require("config.set")
--- Bind space to <leader>
-vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+require("config.remap")
 
 -- Installs a plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
