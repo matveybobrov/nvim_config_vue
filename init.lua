@@ -42,7 +42,9 @@ require("lazy").setup({
 	{'L3MON4D3/LuaSnip'},
   -- Autoclose
   {'m4xshen/autoclose.nvim'},
-  {'windwp/nvim-ts-autotag'}
+  {'windwp/nvim-ts-autotag'},
+  -- Terminal
+  {'akinsho/toggleterm.nvim', version = "*", config = true}
 })
 
 local lspconfig = require('lspconfig')
