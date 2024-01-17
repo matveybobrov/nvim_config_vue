@@ -44,7 +44,10 @@ require("lazy").setup({
   {'m4xshen/autoclose.nvim'},
   {'windwp/nvim-ts-autotag'},
   -- Terminal
-  {'akinsho/toggleterm.nvim', version = "*", config = true}
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
+  -- Git integrations
+  {'tpope/vim-fugitive'},
+  {'lewis6991/gitsigns.nvim'}
 })
 
 local lspconfig = require('lspconfig')

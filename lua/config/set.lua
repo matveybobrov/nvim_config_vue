@@ -24,5 +24,3 @@ vim.opt.updatetime = 50
 
 -- See where editor space should end
 vim.opt.colorcolumn = "80"
--- Disable left gap
-vim.opt.signcolumn = "no"
