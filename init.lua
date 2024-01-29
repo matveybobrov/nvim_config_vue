@@ -29,7 +29,9 @@ require("lazy").setup({
     opts = {},
   },
   -- Pretty status bar
-  { "feline-nvim/feline.nvim"},
+  { "nvim-lualine/lualine.nvim",
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
   -- Treesitter for syntax highlighting and more
   {
     'nvim-treesitter/nvim-treesitter' 
