@@ -16,30 +16,32 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- Telescope for files naviagtion
-	{
-		'nvim-telescope/telescope.nvim', tag = '0.1.5',
-		dependencies = { 'nvim-lua/plenary.nvim' }
-	},
-	-- Color scheme
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
+  -- Telescope for files naviagtion
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+  -- Color scheme
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
-		opts = {},
-	},
-	-- Treesitter for syntax highlighting and more
-	{
-		'nvim-treesitter/nvim-treesitter' 
-	},
-	-- LSP
-	{'williamboman/mason.nvim'},
-	{'williamboman/mason-lspconfig.nvim'},
-	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-	{'neovim/nvim-lspconfig'},
-	{'hrsh7th/cmp-nvim-lsp'},
-	{'hrsh7th/nvim-cmp'},
-	{'L3MON4D3/LuaSnip'},
+    opts = {},
+  },
+  -- Pretty status bar
+  { "feline-nvim/feline.nvim"},
+  -- Treesitter for syntax highlighting and more
+  {
+    'nvim-treesitter/nvim-treesitter' 
+  },
+  -- LSP
+  {'williamboman/mason.nvim'},
+  {'williamboman/mason-lspconfig.nvim'},
+  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+  {'neovim/nvim-lspconfig'},
+  {'hrsh7th/cmp-nvim-lsp'},
+  {'hrsh7th/nvim-cmp'},
+  {'L3MON4D3/LuaSnip'},
   -- Autoclose
   {'m4xshen/autoclose.nvim'},
   {'windwp/nvim-ts-autotag'},
@@ -73,4 +75,8 @@ lspconfig.emmet_language_server.setup({
     --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
     variables = {},
   },
+})
+lspconfig.volar.setup({
+    -- enable "take over mode" for typescript files as well: https://github.com/johnsoncodehk/volar/discussions/471
+    filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 })
